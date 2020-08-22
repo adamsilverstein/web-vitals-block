@@ -21,6 +21,7 @@ export default function save() {
 				'Web Vitals Block – hello from the saved content!',
 				'create-block'
 			) }
+			<web-vitals cls fcp fid lcp ttfb></web-vitals>
 		</p>
 	);
 }

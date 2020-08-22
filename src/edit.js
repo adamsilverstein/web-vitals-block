@@ -31,6 +31,7 @@ export default function Edit( { className } ) {
 				'Web Vitals Block – hello from the editor!',
 				'create-block'
 			) }
+		<web-vitals cls fcp fid lcp ttfb></web-vitals>
 		</p>
 	);
 }

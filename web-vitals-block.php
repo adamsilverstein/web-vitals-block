@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name:     Web Vitals Block
- * Description:     Example block written with ESNext standard and JSX support – build step required.
- * Version:         0.1.0
- * Author:          The WordPress Contributors
- * License:         GPL-2.0-or-later
- * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:     create-block
+ * Description:     A Web Vitals block.
+ * Version:         1.0.0
+ * Author:          adamsilverstein
+ * License:         Apache
+ * License URI:     https://www.apache.org/licenses/LICENSE-2.0
+ * Text Domain:     web-vitals-block
  *
- * @package         create-block
+ * @package         web-vitals-block
  */
 
 /**
@@ -19,6 +19,13 @@
  */
 function create_block_web_vitals_block_block_init() {
 	$dir = dirname( __FILE__ );
+
+	wp_enqueue_script(
+		'web-vitals-element',
+		plugins_url( 'vendor/web-vitals-element.styled.min.js', __FILE__ ),
+		array(),
+		filemtime( 'vendor/web-vitals-element.styled.min.js' )
+	);
 
 	$script_asset_path = "$dir/build/index.asset.php";
 	if ( ! file_exists( $script_asset_path ) ) {
@@ -56,5 +63,7 @@ function create_block_web_vitals_block_block_init() {
 		'editor_style'  => 'create-block-web-vitals-block-block-editor',
 		'style'         => 'create-block-web-vitals-block-block',
 	) );
+
+
 }
 add_action( 'init', 'create_block_web_vitals_block_block_init' );

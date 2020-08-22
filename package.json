@@ -7,6 +7,7 @@
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
+		"watch": "wp-scripts build --watch",
 		"format:js": "wp-scripts format-js",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
@@ -15,5 +16,8 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^12.1.1"
+	},
+	"dependencies": {
+		"web-vitals-element": "^1.0.2"
 	}
 }
