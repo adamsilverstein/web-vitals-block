@@ -16,6 +16,6 @@ import { __ } from '@wordpress/i18n';
  */
 export default function save() {
 	return (
-		<web-vitals lcp="true" fid="true" cls="true"></web-vitals>
+		<web-vitals></web-vitals>
 	);
 }

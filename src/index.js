@@ -77,26 +77,4 @@ registerBlockType( 'create-block/web-vitals-block', {
 	 * @see ./save.js
 	 */
 	save,
-
-	attributes: {
-
-			cls: {
-				type: 'boolean',
-				source: 'attribute',
-				selector: 'web-vitals',
-				attribute: 'cls',
-			},
-			fid: {
-				type: 'boolean',
-				source: 'attribute',
-				selector: 'web-vitals',
-				attribute: 'fid',
-			},
-			cls: {
-				type: 'boolean',
-				source: 'attribute',
-				selector: 'web-vitals',
-				attribute: 'cls',
-			},
-	},
 } );
