@@ -1,7 +1,7 @@
 {
 	"name": "web-vitals-block",
 	"version": "0.1.0",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"description": "Display web vitals in a block.",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",

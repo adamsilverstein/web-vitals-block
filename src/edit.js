@@ -24,14 +24,8 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit( { className } ) {
+export default function Edit( { attributes } ) {
 	return (
-		<p className={ className }>
-			{ __(
-				'Web Vitals Block – hello from the editor!',
-				'create-block'
-			) }
-		<web-vitals cls fcp fid lcp ttfb></web-vitals>
-		</p>
+		<web-vitals lcp="true" fid="true" cls="true"></web-vitals>
 	);
 }

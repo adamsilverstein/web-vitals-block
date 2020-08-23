@@ -16,12 +16,6 @@ import { __ } from '@wordpress/i18n';
  */
 export default function save() {
 	return (
-		<p>
-			{ __(
-				'Web Vitals Block – hello from the saved content!',
-				'create-block'
-			) }
-			<web-vitals cls fcp fid lcp ttfb></web-vitals>
-		</p>
+		<web-vitals lcp="true" fid="true" cls="true"></web-vitals>
 	);
 }

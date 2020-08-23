@@ -24,15 +24,10 @@ function create_block_web_vitals_block_block_init() {
 		'web-vitals-element',
 		plugins_url( 'vendor/web-vitals-element.styled.min.js', __FILE__ ),
 		array(),
-		filemtime( 'vendor/web-vitals-element.styled.min.js' )
+		filemtime( "$dir/vendor/web-vitals-element.styled.min.js" )
 	);
 
 	$script_asset_path = "$dir/build/index.asset.php";
-	if ( ! file_exists( $script_asset_path ) ) {
-		throw new Error(
-			'You need to run `npm start` or `npm run build` for the "create-block/web-vitals-block" block first.'
-		);
-	}
 	$index_js     = 'build/index.js';
 	$script_asset = require( $script_asset_path );
 	wp_register_script(
@@ -63,7 +58,5 @@ function create_block_web_vitals_block_block_init() {
 		'editor_style'  => 'create-block-web-vitals-block-block-editor',
 		'style'         => 'create-block-web-vitals-block-block',
 	) );
-
-
 }
 add_action( 'init', 'create_block_web_vitals_block_block_init' );
