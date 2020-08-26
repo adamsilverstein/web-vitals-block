@@ -1,9 +1,9 @@
 {
 	"name": "web-vitals-block",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Display web vitals in a block.",
-	"author": "The WordPress Contributors",
-	"license": "GPL-2.0-or-later",
+	"author": "adamsilverstein",
+	"license": "MIT",
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",

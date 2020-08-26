@@ -1,12 +1,12 @@
 === Web Vitals Block ===
-Contributors:      The WordPress Contributors
+Contributors:      adamsilverstein
 Tags:              block
 Requires at least: 5.5.0
 Tested up to:      5.5.0
 Stable tag:        1.0.0
 Requires PHP:      7.0.0
-License:           Apache
-License URI:       https://www.apache.org/licenses/LICENSE-2.0
+License:           MIT
+License URI:       https://opensource.org/licenses/MIT
 
 == Description ==
 
@@ -23,9 +23,7 @@ Display web vitals element in a block.
 
 == Changelog ==
 
-= 1.0.1 =
-* Clean up banner.
-
 = 1.0.0 =
-* Initial Release
-* Props to @stefanjudis for `web-vitals-element` - https://github.com/stefanjudis/web-vitals-element upon which this plugin is based.
+* Initial Release.
+* Props to @stefanjudis for `web-vitals-element` - https://github.com/stefanjudis/web-vitals-element
+  upon which this plugin is based.

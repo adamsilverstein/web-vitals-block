@@ -1,10 +1,10 @@
 {
-	"name": "create-block/web-vitals-block",
+	"name": "web-vitals-block",
 	"title": "Web Vitals Block",
 	"category": "widgets",
 	"icon": "chart-bar",
 	"description": "Display web vitals in a block.",
-	"textdomain": "create-block",
+	"textdomain": "web-vitals-block",
 	"supports": {
 		"html": false
 	},
