@@ -23,6 +23,9 @@ Display web vitals element in a block.
 
 == Changelog ==
 
+= 1.0.1 =
+* Clean up banner.
+
 = 1.0.0 =
 * Initial Release
 * Props to @stefanjudis for `web-vitals-element` - https://github.com/stefanjudis/web-vitals-element upon which this plugin is based.
