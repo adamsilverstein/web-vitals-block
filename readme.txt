@@ -3,7 +3,7 @@ Contributors:      adamsilverstein
 Tags:              block
 Requires at least: 5.5.0
 Tested up to:      5.5.0
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 Requires PHP:      7.0.0
 License:           MIT
 License URI:       https://opensource.org/licenses/MIT
@@ -22,6 +22,9 @@ Display web vitals element in a block.
 1. The plugin in use - inserting a web vital block.
 
 == Changelog ==
+
+= 1.0.1 =
+* Tag for update.
 
 = 1.0.0 =
 * Initial Release.

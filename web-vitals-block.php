@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Web Vitals Block
  * Description:     A Web Vitals block.
- * Version:         1.0.0
+ * Version:         1.0.1
  * Author:          adamsilverstein
  * License:         Apache
  * License URI:     https://www.apache.org/licenses/LICENSE-2.0
@@ -53,7 +53,7 @@ function create_block_web_vitals_block_block_init() {
 		filemtime( "$dir/$style_css" )
 	);
 
-	register_block_type( 'create-block/web-vitals-block', array(
+	register_block_type( 'web-vitals/web-vitals-block', array(
 		'editor_script' => 'create-block-web-vitals-block-block-editor',
 		'editor_style'  => 'create-block-web-vitals-block-block-editor',
 		'style'         => 'create-block-web-vitals-block-block',

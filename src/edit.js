@@ -24,8 +24,8 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit( { attributes } ) {
+export default function Edit() {
 	return (
-		<web-vitals { ...attributes } ></web-vitals>
+		<web-vitals></web-vitals>
 	);
 }

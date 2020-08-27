@@ -1,6 +1,6 @@
 {
 	"name": "web-vitals-block",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Display web vitals in a block.",
 	"author": "adamsilverstein",
 	"license": "MIT",
