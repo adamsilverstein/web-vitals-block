@@ -1,6 +1,6 @@
 === Web Vitals Block ===
 Contributors:      adamsilverstein
-Tags:              block
+Tags:              block, web vitals, core web vitals
 Requires at least: 5.5.0
 Tested up to:      5.5.0
 Stable tag:        1.0.2
