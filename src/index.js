@@ -37,7 +37,7 @@ registerBlockType( 'web-vitals/web-vitals-block', {
 	 * This is the display title for your block, which can be translated with `i18n` functions.
 	 * The block inserter will show this name.
 	 */
-	title: __( 'Web Vitals Block', 'create-block' ),
+	title: __( 'Web Vitals Block', 'web-vitals' ),
 
 	/**
 	 * This is a short description for your block, can be translated with `i18n` functions.
@@ -45,7 +45,7 @@ registerBlockType( 'web-vitals/web-vitals-block', {
 	 */
 	description: __(
 		'Display web vitals in a block.',
-		'create-block'
+		'web-vitals'
 	),
 
 	/**

@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Web Vitals Block
  * Description:     A Web Vitals block.
- * Version:         1.0.1
+ * Version:         1.0.2
  * Author:          adamsilverstein
  * License:         Apache
  * License URI:     https://www.apache.org/licenses/LICENSE-2.0
@@ -17,7 +17,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/applying-styles-with-stylesheets/
  */
-function create_block_web_vitals_block_block_init() {
+function web_vitals_block_init() {
 	$dir = dirname( __FILE__ );
 
 	wp_enqueue_script(
@@ -31,7 +31,7 @@ function create_block_web_vitals_block_block_init() {
 	$index_js     = 'build/index.js';
 	$script_asset = require( $script_asset_path );
 	wp_register_script(
-		'create-block-web-vitals-block-block-editor',
+		'web-vitals-block-editor',
 		plugins_url( $index_js, __FILE__ ),
 		$script_asset['dependencies'],
 		$script_asset['version']
@@ -39,7 +39,7 @@ function create_block_web_vitals_block_block_init() {
 
 	$editor_css = 'build/index.css';
 	wp_register_style(
-		'create-block-web-vitals-block-block-editor',
+		'web-vitals-block-editor',
 		plugins_url( $editor_css, __FILE__ ),
 		array(),
 		filemtime( "$dir/$editor_css" )
@@ -54,9 +54,9 @@ function create_block_web_vitals_block_block_init() {
 	);
 
 	register_block_type( 'web-vitals/web-vitals-block', array(
-		'editor_script' => 'create-block-web-vitals-block-block-editor',
-		'editor_style'  => 'create-block-web-vitals-block-block-editor',
+		'editor_script' => 'web-vitals-block-editor',
+		'editor_style'  => 'web-vitals-block-editor',
 		'style'         => 'create-block-web-vitals-block-block',
 	) );
 }
-add_action( 'init', 'create_block_web_vitals_block_block_init' );
+add_action( 'init', 'web_vitals_block_init' );
