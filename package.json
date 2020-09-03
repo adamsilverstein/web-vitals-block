@@ -15,7 +15,8 @@
 		"packages-update": "wp-scripts packages-update"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^12.2.0"
+		"@wordpress/scripts": "^12.2.0",
+		"copy-webpack-plugin": "^6.1.0"
 	},
 	"dependencies": {
 		"web-vitals-element": "^1.1.0"
