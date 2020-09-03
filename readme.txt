@@ -1,9 +1,9 @@
 === Web Vitals Block ===
 Contributors:      adamsilverstein
 Tags:              block, web vitals, core web vitals
-Requires at least: 5.5.0
-Tested up to:      5.5.0
-Stable tag:        1.0.2
+Requires at least: 5.5
+Tested up to:      5.5
+Stable tag:        1.1.0
 Requires PHP:      7.0.0
 License:           MIT
 License URI:       https://opensource.org/licenses/MIT
@@ -22,6 +22,9 @@ Display web vitals element in a block.
 1. The plugin in use - inserting a web vitals block.
 
 == Changelog ==
+= 1.1.0 =
+* Update web-vitals-element to include support for Core Web Vitals 'needs improvement' threshold. See https://github.com/stefanjudis/web-vitals-element/pull/2.
+
 = 1.0.2 =
 * Clean up naming for block directory.
 
