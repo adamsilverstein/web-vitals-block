@@ -5,6 +5,10 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-web-vitals-block {
+.wp-block-web-vitals-web-vitals-block {
 	padding: 0;
+
+	.web-vitals {
+		max-width: 15em;
+	}
 }
