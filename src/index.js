@@ -77,4 +77,37 @@ registerBlockType( 'web-vitals/web-vitals-block', {
 	 * @see ./save.js
 	 */
 	save,
+
+	attributes: {
+		cls: {
+			type: 'boolean',
+			source: 'attribute',
+			selector: 'web-vitals',
+			attribute: 'cls',
+		},
+		fcp: {
+			type: 'boolean',
+			source: 'attribute',
+			selector: 'web-vitals',
+			attribute: 'fcp',
+		},
+		fid: {
+			type: 'boolean',
+			source: 'attribute',
+			selector: 'web-vitals',
+			attribute: 'fid',
+		},
+		lcp: {
+			type: 'boolean',
+			source: 'attribute',
+			selector: 'web-vitals',
+			attribute: 'lcp',
+		},
+		ttfb: {
+			type: 'boolean',
+			source: 'attribute',
+			selector: 'web-vitals',
+			attribute: 'ttfb',
+		}
+	}
 } );

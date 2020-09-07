@@ -19,11 +19,11 @@ import { useState, createElement } from '@wordpress/element';
 import "./editor.scss";
 
 
-const WebVitalToggleControl = withState()(({ isSet, setState, label, setValue }) => (
+const WebVitalToggleControl = withState()(({ isSet, label, setValue }) => (
 	<ToggleControl
 		label={ label }
 		help={ isSet ? label + ' enabled' : label + ' disabled' }
-		checked={isSet}
+		checked={ isSet }
 		onChange={() => {
 			setValue( ! isSet );
 		} }
@@ -41,14 +41,13 @@ const WebVitalToggleControl = withState()(({ isSet, setState, label, setValue })
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
-	const [ CLSenabled, setCLSenabled ] = useState( true );
-	const [ FCPenabled, setFCPenabled ] = useState( true );
-	const [ FIDenabled, setFIDenabled ] = useState( true );
-	const [ LCPenabled, setLCPenabled ] = useState( true );
-	const [ TTFBenabled, setTTFBenabled ] = useState( true );
+export default function Edit( { attributes, setAttributes } ) {
+	const [ CLSenabled, setCLSenabled ] = useState( attributes.cls );
+	const [ FCPenabled, setFCPenabled ] = useState( attributes.fcp );
+	const [ FIDenabled, setFIDenabled ] = useState( attributes.fid );
+	const [ LCPenabled, setLCPenabled ] = useState( attributes.lcp );
+	const [ TTFBenabled, setTTFBenabled ] = useState( attributes.ttfb );
 
-	// FID LCP TTFB
 	let vitalConfig = {};
 	if ( CLSenabled ) {
 		vitalConfig.cls = true;
@@ -66,6 +65,14 @@ export default function Edit() {
 		vitalConfig.ttfb = true;
 	}
 
+	const toggleValue = ( setter, isSet, key ) => {
+		setter( isSet );
+		setAttributes( { [key]: isSet } );
+
+		// Force the custom element to refresh.
+		setAttributes( { isRefreshing: true } );
+		setTimeout( () => { setAttributes( { isRefreshing: false } ); } );
+	}
 	return (
 		<>
 			{
@@ -74,33 +81,43 @@ export default function Edit() {
 						<WebVitalToggleControl
 							label="CLS"
 							isSet={ CLSenabled }
-							setValue= { setCLSenabled }
+							setValue= { ( isSet ) => {
+								toggleValue( setCLSenabled, isSet, 'cls' );
+							} }
 						/>
 						<WebVitalToggleControl
 							label="FCP"
 							isSet={ FCPenabled }
-							setValue= { setFCPenabled }
+							setValue= { ( isSet ) => {
+								toggleValue( setFCPenabled, isSet, 'fcp' );
+							} }
 						/>
 						<WebVitalToggleControl
 							label="FID"
 							isSet={ FIDenabled }
-							setValue= { setFIDenabled }
+							setValue= { ( isSet ) => {
+								toggleValue( setFIDenabled, isSet, 'fid' );
+							} }
 						/>
 						<WebVitalToggleControl
 							label="LCP"
 							isSet={ LCPenabled }
-							setValue= { setLCPenabled }
+							setValue= { ( isSet ) => {
+								toggleValue( setLCPenabled, isSet, 'lcp' );
+							} }
 						/>
 						<WebVitalToggleControl
 							label="TTFB"
 							isSet={ TTFBenabled }
-							setValue= { setTTFBenabled }
+							setValue= { ( isSet ) => {
+								toggleValue( setTTFBenabled, isSet, 'ttfb' );
+							} }
 						/>
 					</div>
 				</InspectorControls>
 			}
 			{
-				createElement('web-vitals', vitalConfig )
+				attributes.isRefreshing ? null : createElement('web-vitals', vitalConfig )
 			}
 		</>
 	);
