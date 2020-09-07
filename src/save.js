@@ -4,6 +4,7 @@
  * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
  */
 import { __ } from '@wordpress/i18n';
+import { createElement } from '@wordpress/element';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -14,8 +15,14 @@ import { __ } from '@wordpress/i18n';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save( { attributes } ) {
+	const parsedAttributes = [];
+	Object.entries( attributes ).map( ( v ) => {
+		if ( v[ 1 ] ) {
+			parsedAttributes[ v[0] ] = 'true';
+		}
+	} );
 	return (
-		<web-vitals></web-vitals>
+		createElement('web-vitals', parsedAttributes )
 	);
 }
