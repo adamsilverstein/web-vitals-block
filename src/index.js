@@ -84,30 +84,42 @@ registerBlockType( 'web-vitals/web-vitals-block', {
 			source: 'attribute',
 			selector: 'web-vitals',
 			attribute: 'cls',
+			value: true
 		},
 		fcp: {
 			type: 'boolean',
 			source: 'attribute',
 			selector: 'web-vitals',
 			attribute: 'fcp',
+			default: true
 		},
 		fid: {
 			type: 'boolean',
 			source: 'attribute',
 			selector: 'web-vitals',
 			attribute: 'fid',
+			default: true
+		},
+		inp: {
+			type: 'boolean',
+			source: 'attribute',
+			selector: 'web-vitals',
+			attribute: 'inp',
+			default: true
 		},
 		lcp: {
 			type: 'boolean',
 			source: 'attribute',
 			selector: 'web-vitals',
 			attribute: 'lcp',
+			default: true
 		},
 		ttfb: {
 			type: 'boolean',
 			source: 'attribute',
 			selector: 'web-vitals',
 			attribute: 'ttfb',
+			default: true
 		}
 	}
 } );

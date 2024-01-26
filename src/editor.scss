@@ -7,6 +7,9 @@
  .editor-styles-wrapper .web-vitals dl {
 	margin: 0;
 }
-.wp-block .web-vitals {
-	max-width: 15em;
+.wp-block web-vitals {
+	display: inline-block;
+	width: 200px;
+	height: 150px;
+	background-color: #eee;
 }
