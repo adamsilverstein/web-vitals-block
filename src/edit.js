@@ -42,13 +42,16 @@ const WebVitalToggleControl = withState()(({ isSet, label, setValue }) => (
  * @return {WPElement} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
+	console.log( {attributes} );
 	const [ CLSenabled, setCLSenabled ] = useState( attributes.cls );
 	const [ FCPenabled, setFCPenabled ] = useState( attributes.fcp );
 	const [ FIDenabled, setFIDenabled ] = useState( attributes.fid );
+	const [ INPenabled, setINPenabled ] = useState( attributes.inp );
 	const [ LCPenabled, setLCPenabled ] = useState( attributes.lcp );
 	const [ TTFBenabled, setTTFBenabled ] = useState( attributes.ttfb );
 
 	let vitalConfig = {};
+	console.log( CLSenabled );
 	if ( CLSenabled ) {
 		vitalConfig.cls = true;
 	}
@@ -97,6 +100,13 @@ export default function Edit( { attributes, setAttributes } ) {
 							isSet={ FIDenabled }
 							setValue= { ( isSet ) => {
 								toggleValue( setFIDenabled, isSet, 'fid' );
+							} }
+						/>
+						<WebVitalToggleControl
+							label="INP"
+							isSet={ INPenabled }
+							setValue= { ( isSet ) => {
+								toggleValue( setINPenabled, isSet, 'inp' );
 							} }
 						/>
 						<WebVitalToggleControl

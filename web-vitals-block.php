@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Web Vitals Block
  * Description:     A Web Vitals block.
- * Version:         1.2.0
+ * Version:         1.2.1
  * Author:          adamsilverstein
  * License:         Apache
  * License URI:     https://www.apache.org/licenses/LICENSE-2.0
