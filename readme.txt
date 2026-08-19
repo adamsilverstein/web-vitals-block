@@ -2,7 +2,7 @@
 Contributors:      adamsilverstein
 Tags:              block, web vitals, core web vitals
 Requires at least: 5.5
-Tested up to:      6.4
+Tested up to:      7.1
 Stable tag:        1.2.1
 Requires PHP:      7.0.0
 License:           MIT
@@ -22,6 +22,9 @@ Display web vitals element in a block.
 1. The plugin in use - inserting a web vitals block.
 
 == Changelog ==
+= 1.2.1 =
+Confirm compatibility with WordPress 7.1.
+
 = 1.2.0 =
 Add toggle controls to enable/disable each vital.
 
