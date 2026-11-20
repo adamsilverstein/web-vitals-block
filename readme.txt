@@ -2,8 +2,8 @@
 Contributors:      adamsilverstein
 Tags:              block, web vitals, core web vitals
 Requires at least: 5.5
-Tested up to:      7.1
-Stable tag:        1.2.2
+Tested up to:      7.2
+Stable tag:        1.2.3
 Requires PHP:      7.0.0
 License:           MIT
 License URI:       https://opensource.org/licenses/MIT
@@ -22,6 +22,10 @@ Display web vitals element in a block.
 1. The plugin in use - inserting a web vitals block.
 
 == Changelog ==
+= 1.2.3 =
+Confirm compatibility with WordPress 7.2.
+Also ships the changes from 1.2.1 and 1.2.2, which were tagged but never published to the plugin directory.
+
 = 1.2.2 =
 Confirm compatibility with WordPress 7.1.
 Also ships the dependency updates from 1.2.1, which was tagged but never published to the plugin directory.
